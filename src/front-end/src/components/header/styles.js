@@ -89,6 +89,7 @@ const StyledTopBar = styled.nav`
         #menu-overlay{
             display: none;
         }
+     
         #menu-items{
             display: flex;
             position: static;

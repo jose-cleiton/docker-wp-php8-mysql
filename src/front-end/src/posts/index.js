@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import fetchPosts from './fetchPosts';
 import StyledPosts from './styles';
-const Posts = () => {
-  const [posts, setPosts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
+import PostsList from './PostsList';
+import usePosts from './usePosts';
 
-  useEffect(() => {
-    fetchPosts()
-      .then(data => {
-        setPosts(data);
-        setIsLoading(false);
-      })
-      .catch(err => {
-        console.log(err);
-        setHasError(true);
-        setIsLoading(false);
-      });
-  }, []);
+const Posts = () => {
+  const { posts, isLoading, hasError } = usePosts();
 
   if (isLoading) {
     return <p>Carregando...</p>;
@@ -28,19 +14,9 @@ const Posts = () => {
   }
 
   return (
-
-
     <StyledPosts>
-        <div>
-          <h1>Posts</h1>
-          {posts.map(post => (
-            <div key={post.id}>
-              <h1>{post.titulo}</h1>
-              <div>{post.content}</div>
-            </div>
-          ))}
-        </div>
-      </StyledPosts>
+      <PostsList posts={posts} />
+    </StyledPosts>
   );
 };
 
