@@ -5,7 +5,7 @@ const StyledSideBar = styled.main`
 .sidebar{
    flex: 3;
    marrgin: 20px;
-   padin-bottom: 20px;
+  padding: 20px;
    background-color: #fdfbfb;
    border-radius: 10px;
    display: flex;
@@ -34,6 +34,7 @@ const StyledSideBar = styled.main`
 }
 .sidebarItem > img{
     margin-top: 15px;
+    width: 200px;
 
 }
 .sidebarItem > p {

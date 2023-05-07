@@ -14,6 +14,7 @@ const StyledPostes = styled.main`
     .postImg{
       width: 100%;
       height: 280px;
+      padding: 10px;
       object-fit: cover;
       border-radius: 10px;
 
@@ -51,6 +52,9 @@ const StyledPostes = styled.main`
 }
 .postDesc{
   font-family: 'Varela Round ', sans-serif;
+  padding: 0 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 14px;
   color: #444;
   line-height: 24px;
