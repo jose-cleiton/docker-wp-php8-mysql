@@ -12,6 +12,13 @@ const StyledTopBar = styled.nav`
     justify-content: space-between;
     background-color: var( --color-background-nav);
 }
+.image-searche-top {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center; 
+}
 
    
 
@@ -72,6 +79,7 @@ const StyledTopBar = styled.nav`
         color: var(--color-text-light);
 
      }
+
    
      /* Configurações do estilo para telas maiores */
 
@@ -109,6 +117,7 @@ const StyledTopBar = styled.nav`
       }
       /* Configurações do estilo para telas menores */
       @media(max-width: 700px){
+        /* Configurações do estilo para telas menores */
         #logo {
           display: block;
         }
@@ -119,18 +128,15 @@ const StyledTopBar = styled.nav`
         #menu-items {
           order: 2;
         }
-        nav {
-          justify-content: space-between;
-        }
+      .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
         
       }
       
-      .image-searche-top {
-        width: 10vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-      }
+   
   
       
 
