@@ -1,4 +1,4 @@
-import StyledPosts from './styles';
+
 import PostsList from './PostsList';
 import usePosts from './usePosts';
 
@@ -14,9 +14,9 @@ const Posts = () => {
   }
 
   return (
-    <StyledPosts>
+   
       <PostsList posts={posts} />
-    </StyledPosts>
+    
   );
 };
 

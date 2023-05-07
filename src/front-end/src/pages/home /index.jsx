@@ -1,11 +1,12 @@
 import React from 'react'
-import Header from './Header';
+import Header from '../header/Header';
 import Posts from '../../posts';
 import Sidebar from '../sidebar';
+import StyledHome from './styles';
 
 const Home = () => {
   return (
-    <>
+    <StyledHome>
       <Header />
       <div className="home">
         <Posts />
@@ -13,7 +14,7 @@ const Home = () => {
   
       </div>
       
-    </>
+    </StyledHome>
       
 
   )
