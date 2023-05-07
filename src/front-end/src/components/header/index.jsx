@@ -10,18 +10,24 @@ const Header = () => {
     <HeaderState>
       {({ menuActive, handleMenuClick, handleMenuItemClick }) => (
         <StyledHeader>
+          
+         
           <nav className='container'>
             <a href='/'>
               <img src={logo} alt='Logo em construção' id='logo' />
             </a>
-            <i class="fa-solid fa-bars" onClick={handleMenuClick}  id='menu-button' ></i>
-          
+            
             {menuActive && <div id='menu-overlay' onClick={handleMenuClick}></div>}
             <HeaderMenuItems
-              menuActive={menuActive}
-              handleMenuItemClick={handleMenuItemClick}
+            menuActive={menuActive}
+            handleMenuItemClick={handleMenuItemClick}
             />
-            <img className="topImg" src={keu} alt="" />
+            <div className='image-searche-top'>
+                <img className="topImg" src={keu} alt="" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+            
+            </div>
+            <i class="fa-solid fa-bars" onClick={handleMenuClick} id='menu-button' ></i>
           </nav>
         </StyledHeader>
       )}

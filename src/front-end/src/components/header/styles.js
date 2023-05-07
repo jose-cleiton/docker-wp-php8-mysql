@@ -113,9 +113,15 @@ const StyledHeader = styled.header`
         nav {
           justify-content: space-between;
         }
+        
       }
       
-      
+      .image-searche-top {
+        width: 10vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
   
       
 
