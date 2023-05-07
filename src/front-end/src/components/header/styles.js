@@ -91,6 +91,33 @@ const StyledHeader = styled.header`
         }
 
     }
+    .topImg {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      @media(max-width: 700px){
+        #logo {
+          display: block;
+        }
+        #menu-button {
+          order: 1;
+          margin-right: 10px;
+        }
+        #menu-items {
+          order: 2;
+        }
+        nav {
+          justify-content: space-between;
+        }
+      }
+      
+      
+  
+      
 
 `;
 
