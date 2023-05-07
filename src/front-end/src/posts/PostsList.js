@@ -3,14 +3,25 @@ import StyledPosts from './styles';
 
 const PostsList = ({ posts }) => {
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className='post'>
+     
       {posts.map(post => (
         <div key={post.id}>
-          <h2>{post.titulo}</h2>
           <img src={post.images[0]} alt={post.titulo} width={160} />
-          <p>{post.content}</p>
-          <p>Data de publicação: {new Date(post.data_publicacao).toLocaleDateString()}</p> {/* Adiciona a data formatada */}
+          <div className="postInfo">
+            <div className="postCats">
+              <span className="postCat"></span>
+              <span className="postCat"></span>              
+            </div>
+            <span className="postTitle">{post.titulo}</span>
+            <hr />
+            <span className="postDate">{new Date(post.data_publicacao).toLocaleDateString()}</span>
+            <p>{post.content}</p>
+
+          
+          </div>
+         
+          
         </div>
       ))}
     </div>
