@@ -19,7 +19,9 @@ const fetchPosts = () => {
           images,
         };
       });
+      console.log(data);
       return data;
+
     });
 };
 
