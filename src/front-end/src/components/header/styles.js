@@ -1,21 +1,30 @@
 import styled from "styled-components";
 
-const StyledHeader = styled.header`
-  background-color:  var(--color-background-nav);
+const StyledTopBar = styled.nav`
+/* Estilo para desktop */
+.top{
     width: 100%;
     height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    background-color: var( --color-background-nav);
+}
+
+   
 
     #logo{
         width: 100px;
         height: 60px;
 
     }
+    /* Configurações para o botão do menu no desktop */
     #menu-button{
         width: 30px;
     }
+    /* Configurações do overlay do menu no desktop */
     #menu-overlay{
         position: fixed;
         top: 0;
@@ -26,12 +35,15 @@ const StyledHeader = styled.header`
         opacity: 0.8;
 
     }
+    /* Configurações do logo no menu no desktop */
     #menu-logo{
         width: 110px;    
         margin-top: 30px;  
         margin-bottom: 10px;
 
     }
+    /* Configurações do menu no desktop */
+
     #menu-items{
         position: fixed;
         top: 0;
@@ -47,6 +59,8 @@ const StyledHeader = styled.header`
         #menu-items.active{
             display: flex;
         }
+    /* Configurações de itens da lista no desktop */
+
      ul{
             list-style: none;
             text-align: center;
@@ -58,14 +72,8 @@ const StyledHeader = styled.header`
         color: var(--color-text-light);
 
      }
-
-    nav{
-        display: flex;
-        justify-content: space-between;
-        height: 60px;
-        align-items: center;
-
-    }
+   
+     /* Configurações do estilo para telas maiores */
 
     @media(min-width: 700px){
         #menu-button,
@@ -99,6 +107,7 @@ const StyledHeader = styled.header`
         margin-right: 15px;
         cursor: pointer;
       }
+      /* Configurações do estilo para telas menores */
       @media(max-width: 700px){
         #logo {
           display: block;
@@ -127,4 +136,4 @@ const StyledHeader = styled.header`
 
 `;
 
-export default StyledHeader;
+export default StyledTopBar;

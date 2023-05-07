@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const StyledMain = styled.main`
+const StyledHeader = styled.header`
 // background-color: var(--color-background-home);
 // justify-content: center;
 // align-items: center;
@@ -50,4 +50,4 @@ const StyledMain = styled.main`
 
 `;
 
-export default StyledMain;
+export default StyledHeader;

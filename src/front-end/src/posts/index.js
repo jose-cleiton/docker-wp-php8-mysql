@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import fetchPosts from './fetchPosts';
-
+import StyledPosts from './styles';
 const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,15 +28,19 @@ const Posts = () => {
   }
 
   return (
-    <div>
-      <h1>Posts</h1>
-      {posts.map(post => (
-        <div key={post.id}>
-          <h1>{post.titulo}</h1>
-          <div>{post.content}</div>
+
+
+    <StyledPosts>
+        <div>
+          <h1>Posts</h1>
+          {posts.map(post => (
+            <div key={post.id}>
+              <h1>{post.titulo}</h1>
+              <div>{post.content}</div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </StyledPosts>
   );
 };
 
